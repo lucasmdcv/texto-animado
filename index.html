@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Texto Animado</title>
+    <style>
+        @import url('https://fonts.google.com/specimen/Poppins?query=po');
+
+        *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Poppins', sans-serif;
+        }
+
+        body{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh;
+        background: #111111;
+        }
+
+        .container{
+        display: inline-flex;
+        }
+
+        .estatico{
+        color: #fff;
+        font-size: 60px;
+        font-weight: 400;
+        }
+        .texto    {
+        margin-left:15px ;
+        line-height: 90px;
+        height: 90px;
+        overflow: hidden;
+        }
+        .texto   ul li span {
+
+        color: rgb(244, 45, 0);
+        list-style: 0;
+        font-size: 60px;
+        font-weight: 500;
+        left:0;
+        position: relative;
+        animation: slide 6s steps(4) infinite;    
+        top: 100;
+        }
+
+        .texto ul li span{
+        position: relative;
+        }
+
+        @keyframes slide{
+        100%{
+        top: -360px
+        }
+        }
+
+        .texto ul li span::after{
+        content: "";
+        position: relative;
+        width: 100%;
+        height: 100%;
+        left: 0;
+        border-left: 2px solid rgb(211, 171, 171);
+        background: #111111; 
+        animation: linear 6s steps(4) infinite;  
+        }
+
+        .texto ul li linear{
+        position: relative;
+        }
+
+        @keyframes linear{
+        100%{
+        left: 100%;
+        margin: 0 -35px 0 35px;
+        }
+        }
+    </style>
+
+</head>
+
+
+<body>  
+    <div class="container">
+    </div>
+    <div class="estatico" >Eu sou o Lucas</div>
+        <div class="texto" >
+          
+            <ul >
+                <li><span>Mendes</span></li>
+                <li><span>da</span></li>
+                <li><span>Conceição</span></li>
+                <li><span>Vieira</span></li>
+            </ul> 
+           
+        </div>
+</body>
+
+</html>
